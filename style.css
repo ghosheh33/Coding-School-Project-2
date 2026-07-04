@@ -42,6 +42,7 @@ body{
 .btn-Secondary{
     height: 45px;
     color: var(--text-gray);
+    background-color: var(--text-white);
     padding: 10px;
     border: 1px solid var(--primary-color);
     border-radius: 5px; 
@@ -68,7 +69,7 @@ body{
 
 
 /**********************|nav|**********************/
-nav{
+nav {
     width: 94%;
     height: 5vh;
     background-color: var(--text-white);
@@ -78,39 +79,99 @@ nav{
     justify-content: space-between;
     align-items: center;
     gap: 2vw;
-
     font-size: 20px;
     box-shadow: var(--shadow);
-
+    position: relative;
 }
-nav span{
-    width: 50%;
+
+nav span.text-primary {
+    width: auto;
     font-size: 45px;
     font-weight: bold;
 }
-nav a{
 
+.nav-links {
+    display: flex;
+    gap: 2vw;
+}
+
+nav a {
     color: var(--text-Black);
     text-decoration: none;   
 }
-nav a:hover{
+
+nav a:hover {
     color: var(--primary-color);
     text-decoration: underline;
     text-underline-offset: 30px;
 }
 
+.burger-menu {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.burger-menu span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--text-Black);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    nav span.text-primary {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--text-white);
+        box-shadow: var(--shadow);
+        padding: 20px;
+        gap: 20px;
+        box-sizing: border-box;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    
+    nav a:hover {
+        text-underline-offset: 10px;
+    }
+}
+
 /**********************|hero|**********************/
 #hero{
-    width: 80%;
-    height: 500px;
-    padding-left: 10%;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
     gap: 100px;
 }
 #hero .info{
+    width: 70%;
     display: flex;
     justify-self: start;
     align-items: start;
@@ -136,7 +197,7 @@ nav a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 #about .photo{
     width: 30%;
@@ -301,8 +362,123 @@ nav a:hover{
     height: auto;
 }
 
-
 /**********************|Experiences|**********************/
+#experience{
+    height: 830px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+#experience .line{
+    width: 0px;
+    height: 100%;
+    border: 5px solid var(--accent-color);
+    
+}
+#experience .cards{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#experience .cards .card{
+    width: 400px;
+    height: 260px;
+    background-color: var(--text-white);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+
+}
+#experience .cards .card .job_title{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+
+}
+#experience .cards .card .company{
+    font-size: 20px;
+    margin: 10px;
+
+}
+#experience .cards .card .date{
+    font-size: 18px;
+     font-weight: bold;
+    margin: 10px;
+
+}
+#experience .cards .card .details{
+    color: var(--text-gray);
+    font-size: 16px;
+    margin: 10px;
+
+}
+#experience .cards .card:hover{
+    color: var(--text-white) !important;
+    background-color: var(--primary-color);
+}
+
 /**********************|Contact|**********************/
+#contact{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
 
+form{
+    width: 400px;
+    background-color: var(--text-white);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
 
+    font-size: 18px;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+form div{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+form div input ,select{
+    width: 400px;
+    height: 30px;
+    background-color: #f8fafc;
+    border: 0.5px solid var(--primary-color);
+}
+form div textarea{
+    width: 400px;
+    height: 100px;
+    background-color: #f8fafc;
+    border: 0.5px solid var(--primary-color);
+}
+
+form input[type="submit"]{
+    width: 400px;
+    height: 50px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border: 0.5px solid var(--primary-color);
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*****/
+footer{
+    background-color: var(--text-gray);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -9,13 +9,21 @@
 <body>
     <nav>
         <span class="text-primary">Mahmoud Ghosheh</span>
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experiences</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-links" id="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experiences</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <button class="burger-menu" id="burger-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
     </nav>
     <section id="hero">
         <div class="info">
@@ -163,9 +171,62 @@
     </section>
     <hr>
     <h1 class="text-primary align-center">Experience</h1>
-    <section id="experience"></section>
+    <section id="experience">
+        <div class="line"></div>
+        <div class="cards">
+            <div class="card">
+                <div class="job_title">Solutions Architect & Full-Stack Developer</div>
+                <div class="company">Black Eagle Design & Printing</div>
+                <div class="date">jun/2026 - jun2027</div>
+                <div class="details">Founded a design and printing agency bridging the physical and digital divide. Beyond traditional promotional materials, I lead the integration of 3D modeling into web environments, creating interactive brand experiences and custom character designs (including specialized Ramadan-themed campaigns).</div>
+            </div>
+            <div class="card">
+                <div class="job_title">Solutions Architect & Full-Stack Developer</div>
+                <div class="company">Black Eagle Design & Printing</div>
+                <div class="date">jun/2026 - jun2027</div>
+                <div class="details">Founded a design and printing agency bridging the physical and digital divide. Beyond traditional promotional materials, I lead the integration of 3D modeling into web environments, creating interactive brand experiences and custom character designs (including specialized Ramadan-themed campaigns).</div>
+            </div>
+            <div class="card">
+                <div class="job_title">Solutions Architect & Full-Stack Developer</div>
+                <div class="company">Black Eagle Design & Printing</div>
+                <div class="date">jun/2026 - jun2027</div>
+                <div class="details">Founded a design and printing agency bridging the physical and digital divide. Beyond traditional promotional materials, I lead the integration of 3D modeling into web environments, creating interactive brand experiences and custom character designs (including specialized Ramadan-themed campaigns).</div>
+            </div>
+        </div>
+    </section>
     <hr>
-    <h1 class="text-primary align-center">Contact</h1>
-    <section id="contact"></section>
+    <h1 class="align-center">Let's <span class="text-primary">Contact</span></h1>
+    <section id="contact">
+        <form>
+            <div>
+            <label>Full Name</label>
+            <input type="text">
+            </div>
+            <div>
+            <label>Email</label>
+            <input type="email">
+            </div>
+            <div>
+            <label>Subject / Service Needed</label>
+            <select>
+                <option>SAAS System</option>
+                <option>Automation</option>
+                <option>Website</option>
+                <option>RAG System</option>
+            </select>
+            </div>
+            <div>
+            <label>Message</label>
+            <textarea></textarea>
+            </div>
+            <input type="submit" value="Send Message">
+
+        </form>
+    </section>
+    <hr>
+    <footer>
+        <span>© 2026 Mahmoud Ghosheh.</span>
+        <a href=""><img src="image/skills/github.png" alt="Mahmoud Ghosheh" width="30px"></a>
+    </footer>
 </body>
 </html>
