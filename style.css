@@ -70,7 +70,7 @@ body{
 
 /**********************|nav|**********************/
 nav {
-    width: 94%;
+    width: 90%;
     height: 5vh;
     background-color: var(--text-white);
     padding: 20px;
@@ -127,6 +127,11 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+    nav{
+        width: 350px;
+        padding: 20px;
+
+    }
     .burger-menu {
         display: flex;
     }
@@ -157,6 +162,13 @@ nav a:hover {
     nav a:hover {
         text-underline-offset: 10px;
     }
+    
+    #hero .name{
+        font-size: 5px;
+    }
+    #education .card{
+        margin: 60px;
+    }
 }
 
 /**********************|hero|**********************/
@@ -172,6 +184,7 @@ nav a:hover {
 }
 #hero .info{
     width: 70%;
+    min-width: 330px;
     display: flex;
     justify-self: start;
     align-items: start;
@@ -182,7 +195,9 @@ nav a:hover {
 }
 #hero .name{
     font-size: 100px;
+    
 }
+
 #hero .name span{
     font-size: 100px;
 }
@@ -201,17 +216,17 @@ nav a:hover {
 }
 #about .photo{
     width: 30%;
-    min-width: 400px;
+    min-width: 350px;
     display: flex;
     justify-content: end;
     margin: 20px;
 }
 #about img{
-    width:400px;
+    width:350px;
 }
 #about .body{
     width: 50%;
-    min-width: 400px;
+    min-width: 350px;
     display: flex;
     justify-content: start;
     flex-direction: column;
@@ -229,7 +244,6 @@ nav a:hover {
     gap: 15px;
     text-align: center;
 }
-
 #skills .col{
     display: flex;
     justify-content: center;
@@ -237,7 +251,6 @@ nav a:hover {
     flex-direction: column;
     gap: 20px;
 }
-
 #skills .card{
     width: 160px;
     height: 50px;
@@ -261,7 +274,7 @@ nav a:hover {
 }
 /**********************|Education|**********************/
 #education{
-    height: 300px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -270,8 +283,8 @@ nav a:hover {
 
 }
 #education .card{
-    width: 50%;
-    min-width: 400px;
+    width: 80%;
+    min-width: 300px;
     background-color: var(--text-white);
     border: 2px solid var(--primary-color);
     border-radius: 5px;
@@ -280,6 +293,7 @@ nav a:hover {
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    margin: 20px;
 
 }
 #education .card .majer{
@@ -364,7 +378,7 @@ nav a:hover {
 
 /**********************|Experiences|**********************/
 #experience{
-    height: 830px;
+    height: 930px;
     margin: 50px;
     display: flex;
     justify-content: center;
@@ -385,8 +399,7 @@ nav a:hover {
     gap: 30px;
 }
 #experience .cards .card{
-    width: 400px;
-    height: 260px;
+    width: 300px;
     background-color: var(--text-white);
     border: 1px solid var(--accent-color);
     border-radius: 5px;
@@ -430,7 +443,7 @@ nav a:hover {
 }
 
 form{
-    width: 400px;
+    width: 350px;
     background-color: var(--text-white);
     border: 2px solid var(--primary-color);
     border-radius: 5px;
@@ -452,20 +465,20 @@ form div{
     flex-direction: column;
 }
 form div input ,select{
-    width: 400px;
+    width: 330px;
     height: 30px;
     background-color: #f8fafc;
     border: 0.5px solid var(--primary-color);
 }
 form div textarea{
-    width: 400px;
+    width: 330px;
     height: 100px;
     background-color: #f8fafc;
     border: 0.5px solid var(--primary-color);
 }
 
 form input[type="submit"]{
-    width: 400px;
+    width: 330px;
     height: 50px;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     border: 0.5px solid var(--primary-color);
