@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -31,12 +32,13 @@
             <div class="job_title">full Stack Developer</div>
             <div class="hook">I build intelligent, scalable web applications. From multi-tenant AI RAG systems to high-performance SaaS platforms, I engineer solutions that drive real business transformation.</div>
             <div>
-            <button class="btn-CTA" onclick="location.href='#contact'" type="button">Let's work together</button>
+            <button class="btn-CTA" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mahmoud-ghosheh/new-meeting'}); return false;">Let's work together</button>
             <button class="btn-Secondary" onclick="window.location.href='https://ghosheh33.github.io/chess'" type="button">Challenge me</button>
             </div>
         </div>
         <div class="photo">
-            <img src="image/hero.png" alt="Mahmoud Ghosheh">
+            <div class="smart-ball"></div>
+          <!--  <img src="image/hero.png" alt="Mahmoud Ghosheh">-->
         </div>
     </section>
     <hr>
@@ -47,13 +49,14 @@
         <div class="body">
             <h1 class="text-primary">About me</h1>
             <p>
-                As a Software Engineering student, I focus on building scalable, performant systems from the ground up. My technical philosophy revolves around clean architecture and choosing the right tool for the job.
-                Whether it is structuring a multi-tenant RAG (Retrieval-Augmented Generation) backend with Supabase, orchestrating complex workflows using n8n, or developing lightweight Vanilla JS applications, I am driven by the mechanics of the web.
+                Software Engineer and Manager of Black Eagle with hands-on experience in full-stack web
+development, UI/UX design, and backend systems using Java, ASP.NET, PHP, and SQL.
+Experienced in managing IT operations at Mickey Design and leading volunteer technical
+teams (ITeam, IEEE CS Chapter) to organize workshops and mentor peers. Passionate about
+building maintainable web applications, taking ownership of components from design
+through delivery, and continuously learning to adopt new tools and best practices.
             </p>
-            <p>
-                My approach to development is heavily influenced by my background in visual communication. As the founder of Black Eagle, I learned early on that technical functionality must be matched by an intuitive, engaging user experience.
-                From conceptualizing promotional brand assets to architecting the UI for comprehensive SaaS platforms, I ensure the final product looks as flawless as the underlying code.
-            </p>
+            
         </div>
     </section>
     <hr>
@@ -70,7 +73,7 @@
                 <span>Type Script</span>
             </div>
             <div class="card">
-                <img src="image/skills/js.png">
+                <img src="image/skills/html.webp">
                 <span>HTML & CSS</span>
             </div>
         </div>
@@ -98,6 +101,10 @@
                 <img src="image/skills/Postgresql.webp">
                 <span>Postgre SQL</span>
             </div>
+            <div class="card">
+                <img src="image/skills/supabase.png">
+                <span>Supabase</span>
+            </div>
         </div>
         <div class="col">
             <h2>AI</h2>
@@ -108,6 +115,10 @@
             <div class="card">
                 <img src="image/skills/ollama.png">
                 <span>ollama</span>
+            </div>
+            <div class="card">
+                <img src="image/skills/rag.jpg">
+                <span>RAG System</span>
             </div>
         </div>
         <div class="col">
@@ -134,36 +145,41 @@
             <div class="title">Al-Zaytoonah University</div>
             <div class="graduation-date">Feb/2026</div>
             <div class="Des">
-                As a Volunteer Team Leader, the team gave me the opportunity to participate in many competitions, hackathons, and conferences, which helped me gain valuable knowledge and experience. Over time, our role evolved from simply participating in these events to organizing them within the university, including events such as the ZCC competition. I also worked on organizing workshops for students, building relationships and partnerships with external collaborators, and forming and managing a team to ensure the successful planning and execution of these activities.
+                My academic journey was not just a traditional path, but a fertile environment for innovation and initiative. During my studies, I combined theoretical concepts of software engineering with practical application, starting from developing and designing integrated systems such as the smart chatbot to serve students, which was officially adopted by the college, to leading student technical teams and organizing hackathons to develop my colleagues' skills and connect them with the job market.            </div>
             </div>
-        </div>
     </section>
     <hr>
     <h1 class="text-primary align-center">Projects</h1>
     <section id="projects">
         <div class="card">
-            <img src="image/it.jpg" alt="">
+            <img src="image/university.png" alt="">
             <div class="text">
-                <p class="title">Delivery Management System</p>
-                <p class="details">Outlined the functional requirements and system architecture for a comprehensive delivery logistics platform, focusing on real-time tracking, automated dispatching, and driver route optimization.</p>
+                <p class="title">University Plus Chatbot </p>
+                <p class="details"> Developed an AI-powered chatbot to automate responses to frequently asked student queries, which was
+                    officially incubated by the college.
+                    ,Architected complex automation workflows utilizing n8n and integrated local LLMs via Ollama.</p>
                 <hr>
                 <a href="github.com"><img src="image/skills/github.png" alt="GitHub">Source</a>
             </div>
         </div>
          <div class="card">
-            <img src="image/it.jpg" alt="">
+            <img src="image/CRM.jpg" alt="">
             <div class="text">
-                <p class="title">Delivery Management System</p>
-                <p class="details">Outlined the functional requirements and system architecture for a comprehensive delivery logistics platform, focusing on real-time tracking, automated dispatching, and driver route optimization.</p>
+                <p class="title">CRM System</p>
+                <p class="details">Developed a custom Customer Relationship Management (CRM) system to streamline business operations
+                    and client management.
+                    ,Built a robust backend utilizing PHP and MySQL, paired with a modern interface featuring minimalist luxury.</p>
                 <hr>
                 <a href="github.com"><img src="image/skills/github.png" alt="GitHub">Source</a>
             </div>
         </div>
          <div class="card">
-            <img src="image/it.jpg" alt="">
+            <img src="image/event.jpg" alt="">
             <div class="text">
-                <p class="title">Delivery Management System</p>
-                <p class="details">Outlined the functional requirements and system architecture for a comprehensive delivery logistics platform, focusing on real-time tracking, automated dispatching, and driver route optimization.</p>
+                <p class="title">Event Management SaaS Platform</p>
+                <p class="details">Engineered a comprehensive Software as a Service (SaaS) solution for end-to-end event management.
+                    Implemented an interactive administrative dashboard, automated email invitations, and a dynamic
+                    ticketing system.</p>
                 <hr>
                 <a href="github.com"><img src="image/skills/github.png" alt="GitHub">Source</a>
             </div>
@@ -175,22 +191,33 @@
         <div class="line"></div>
         <div class="cards">
             <div class="card">
-                <div class="job_title">Solutions Architect & Full-Stack Developer</div>
-                <div class="company">Black Eagle Design & Printing</div>
-                <div class="date">jun/2026 - jun2027</div>
-                <div class="details">Founded a design and printing agency bridging the physical and digital divide. Beyond traditional promotional materials, I lead the integration of 3D modeling into web environments, creating interactive brand experiences and custom character designs (including specialized Ramadan-themed campaigns).</div>
+                <div class="job_title">Full Stack PHP Developer</div>
+                <div class="company">Amoux</div>
+                <div class="date">Nov/2026 - Dec/2026</div>
+                <div class="details">Contributed to the development and maintenance of web applications utilizing PHP and database
+                management systems.
+                ,Integrated frontend interfaces with backend logic, ensuring seamless user experiences and robust
+                application functionality.
+                </div>
             </div>
             <div class="card">
-                <div class="job_title">Solutions Architect & Full-Stack Developer</div>
+                <div class="job_title">Manager</div>
                 <div class="company">Black Eagle Design & Printing</div>
-                <div class="date">jun/2026 - jun2027</div>
-                <div class="details">Founded a design and printing agency bridging the physical and digital divide. Beyond traditional promotional materials, I lead the integration of 3D modeling into web environments, creating interactive brand experiences and custom character designs (including specialized Ramadan-themed campaigns).</div>
+                <div class="date"> July/2024 - Present</div>
+                <div class="details">At Black Eagle, I lead the company and manage the IT department, ensuring our design and packaging
+                    solutions reflect our clients' brand identities with professionalism and precision. By collaborating with leading
+                    companies in Jordan, we focus on delivering high-quality, innovative design and packaging solutions. As a
+                    subsidiary of Mickey Design, our mission is to elevate brand presence through tailored packaging strategies.</div>
             </div>
             <div class="card">
-                <div class="job_title">Solutions Architect & Full-Stack Developer</div>
-                <div class="company">Black Eagle Design & Printing</div>
-                <div class="date">jun/2026 - jun2027</div>
-                <div class="details">Founded a design and printing agency bridging the physical and digital divide. Beyond traditional promotional materials, I lead the integration of 3D modeling into web environments, creating interactive brand experiences and custom character designs (including specialized Ramadan-themed campaigns).</div>
+                <div class="job_title">Chairman</div>
+                <div class="company">ITeam</div>
+                <div class="date">Oct/2022 - Jun/2025</div>
+                <div class="details">As a Volunteer Team Leader, the team gave me the opportunity to participate in many competitions,
+                    hackathons, and conferences, which helped me gain valuable knowledge and experience. Over time, our role
+                    evolved from simply participating in these events to organizing them within the university, including events
+                    such as the ZCC competition.
+                </div>
             </div>
         </div>
     </section>
@@ -226,7 +253,11 @@
     <hr>
     <footer>
         <span>© 2026 Mahmoud Ghosheh.</span>
-        <a href=""><img src="image/skills/github.png" alt="Mahmoud Ghosheh" width="30px"></a>
+        <div>
+            <a href=""><img src="image/skills/github.png" alt="Mahmoud Ghosheh" width="30px"></a>
+            <a href=""><img src="image/skills/linkedin.webp" alt="Mahmoud Ghosheh" width="40px"></a>
+        </div>
     </footer>
+     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>

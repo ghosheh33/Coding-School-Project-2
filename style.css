@@ -174,6 +174,7 @@ nav a:hover {
 /**********************|hero|**********************/
 #hero{
     width: 90%;
+    height: 580px;
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
@@ -205,6 +206,7 @@ nav a:hover {
     color: var(--text-gray);
     font-size: 45px;
 }
+
 
 /**********************|about|**********************/
 #about{
@@ -480,6 +482,7 @@ form div textarea{
 form input[type="submit"]{
     width: 330px;
     height: 50px;
+    color: var(--text-white);
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     border: 0.5px solid var(--primary-color);
     border-radius: 30px;
@@ -487,11 +490,55 @@ form input[type="submit"]{
     font-weight: bold;
 }
 
-/*****/
+/**********************|footer|**********************/
 footer{
-    background-color: var(--text-gray);
+    background-color: #bca5f0;
     padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+/**********************|smart ball|**********************/
+
+.smart-ball {
+    width: 260px; 
+    height: 260px; 
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 40%, var(--accent-color) 70%, var(--primary-color) 100%);
+    background-size: 300% 300%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: inset 15px 15px 40px rgba(255, 255, 255, 0.4), inset -15px -15px 40px rgba(0, 0, 0, 0.3), 0 15px 45px rgba(94, 92, 230, 0.4);
+    animation: highWavesMorph 6s ease-in-out infinite alternate, liquidColorFlow 10s linear infinite;
+}
+
+.smart-ball::before {
+    content: ""; 
+    position: absolute; 
+    top: 10%; 
+    left: 15%; 
+    width: 50%; 
+    height: 40%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.6) 0%, transparent 70%);
+    border-radius: 50%; 
+    filter: blur(5px); 
+    animation: lightShimmer 4s ease-in-out infinite alternate;
+}
+
+@keyframes highWavesMorph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: scale(1); }
+    33% { border-radius: 50% 50% 30% 70% / 50% 70% 30% 50%; transform: scale(1.05); }
+    66% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; transform: scale(0.98); }
+    100% { border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%; transform: scale(1.02); }
+}
+
+@keyframes liquidColorFlow { 
+    0% { background-position: 0% 0%; } 
+    50% { background-position: 100% 100%; } 
+    100% { background-position: 0% 0%; } 
+}
+
+@keyframes lightShimmer { 
+    0% { transform: translate(-10px, -5px) scale(0.8); opacity: 0.5; } 
+    100% { transform: translate(15px, 10px) scale(1.2); opacity: 0.8; } 
 }
